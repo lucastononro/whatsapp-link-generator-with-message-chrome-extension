@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Whatsapp link generator",
+  "description": "Generate a WhatsApp wa.me link with a prefilled message containing the current website.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Whatsapp link generator",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs"]
+}
+

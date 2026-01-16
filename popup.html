@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp link generator</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Whatsapp link generator</h1>
+        <p>Generate a <code>wa.me</code> link with the current website in the message.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <label class="field">
+            <span class="label">DDI</span>
+            <select id="ddiSelect" class="input"></select>
+          </label>
+          <label class="field grow">
+            <span class="label">WhatsApp number</span>
+            <input
+              id="phoneInput"
+              class="input"
+              inputmode="numeric"
+              autocomplete="tel-national"
+              placeholder="(16) 99156-3873"
+            />
+            <span id="phoneHint" class="hint"></span>
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="label">Website (current tab)</span>
+          <input id="websiteInput" class="input" readonly />
+        </label>
+
+        <label class="field">
+          <span class="label">Message</span>
+          <textarea
+            id="messageInput"
+            class="input textarea"
+            rows="6"
+            spellcheck="false"
+          ></textarea>
+          <span class="hint">The URL part updates automatically when your current tab changes.</span>
+        </label>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn primary" type="button">Generate</button>
+          <button id="copyBtn" class="btn" type="button" disabled>Copy</button>
+          <button id="openBtn" class="btn" type="button" disabled>Open</button>
+        </div>
+
+        <label class="field">
+          <span class="label">Generated URL</span>
+          <input id="outputInput" class="input mono" readonly />
+          <span id="status" class="hint" aria-live="polite"></span>
+        </label>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+
